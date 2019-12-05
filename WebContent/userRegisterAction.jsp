@@ -10,7 +10,7 @@ request.setCharacterEncoding("UTF-8");
 String userID=null;
 String userPassword =null;
 String userEmail = null;
-String userEmailHash = null;
+
 if(request.getParameter("userID") != null) {
 	userID = request.getParameter("userID");
 }
@@ -30,7 +30,7 @@ if(userID == null || userPassword ==null || userEmail == null) {
 return;
 }
 UserDAO userDAO = new UserDAO();
-int result = userDAO.join(new UserDTO(userID, userPassword, userEmail, SHA256.getSHA256(userEmailHash), false));
+int result = userDAO.join(new UserDTO(userID, userPassword, userEmail, SHA256.getSHA256(userEmail), false));
 if (result == -1){
 	PrintWriter script = response.getWriter();
 	script.println("<script>");
