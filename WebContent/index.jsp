@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +10,7 @@
 <form action="./userJoinAction.jsp" method="post">
 <input type="text" name="userID">
 <input type="password" name="userPassword">
-<input type="submit" value="È¸¿ø°¡ÀÔ">
+<input type="submit" value="ÃˆÂ¸Â¿Ã¸Â°Â¡Ã€Ã”">
 </form>
 
 </body>
