@@ -18,7 +18,7 @@ public class UserDAO {
 			pstmt.setString(1, userID);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-				if (rs.getString(1).contentEquals(userPassword)) {
+				if (rs.getString(1).equals(userPassword)) {
 					return 1; // 로그인 성공
 				} else {
 					return 0; // 비밀번호 틀림
@@ -113,13 +113,13 @@ public class UserDAO {
 			}
 			try {
 				if (pstmt != null)
-					conn.close();
+					pstmt.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 			try {
 				if (rs != null)
-					conn.close();
+					rs.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -152,13 +152,13 @@ public class UserDAO {
 			}
 			try {
 				if (pstmt != null)
-					conn.close();
+					pstmt.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 			try {
 				if (rs != null)
-					conn.close();
+					rs.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -167,7 +167,7 @@ public class UserDAO {
 	}
 	
 	public boolean setUserEmailChecked(String userID) {
-		String SQL = "UPDATE USER SET userEmailCHecked = true WHERE userID = ?";
+		String SQL = "UPDATE USER SET userEmailChecked = true WHERE userID = ?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -187,13 +187,13 @@ public class UserDAO {
 			}
 			try {
 				if (pstmt != null)
-					conn.close();
+					pstmt.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 			try {
 				if (rs != null)
-					conn.close();
+					rs.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
