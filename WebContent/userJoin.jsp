@@ -13,7 +13,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="index.jsp">강의평가 웹 사이트</a>
-		<button class="navbar-toggler" tyle="button" data-toggle="collapse"
+		<button class="navbar-toggler" style="button" data-toggle="collapse"
 			data-target="#navbar">
 			<span class="navbar-toggler-icon"></span>
 		</button>
