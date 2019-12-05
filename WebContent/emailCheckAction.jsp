@@ -14,7 +14,7 @@ String userID = null;
 if(session.getAttribute("userID") != null){
 	userID = (String) session.getAttribute("userID");
 }
-if(userID == null) {
+if(userID == null) { 
 	PrintWriter script = response.getWriter();
 	script.println("<script>");
 	script.println("alert('로그인을 해주세요.');");
@@ -51,13 +51,13 @@ if(isRight == true){
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="vieport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>������ �� ����Ʈ Test</title>
+<title>강의평가 웹 사이트 Test</title>
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/custom.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="index.jsp">������ �� ����Ʈ</a>
+		<a class="navbar-brand" href="index.jsp">강의평가 웹 사이트</a>
 		<button class="navbar-toggler" style="button" data-toggle="collapse"
 			data-target="#navbar">
 			<span class="navbar-toggler-icon"></span>
@@ -65,26 +65,26 @@ if(isRight == true){
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
-					href="index.jsp">����</a></li>
+					href="index.jsp">메인</a></li>
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" id="dropdown"
-					data-toggle="dropdown">ȸ�� ����</a>
+					data-toggle="dropdown">회원 관리</a>
 					<div class="dropdown-menu" aria-labelledby="dropdown">
-						<a class="dropdown-item" href="userLogin.jsp">�α���</a> <a class="dropdown-item"
-							href="userJoin.jsp">ȸ������</a> <a class="dropdown-item" href="userLogout.jsp">�α׾ƿ�</a>
+						<a class="dropdown-item" href="userLogin.jsp">로그인</a> <a class="dropdown-item"
+							href="userJoin.jsp">회원가입</a> <a class="dropdown-item" href="userLogout.jsp">로그아웃</a>
 					</div></li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search"
-					placeholder="������ �Է��ϼ���." aria-label="search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">�˻�</button>
+					placeholder="내용을 입력하세요." aria-label="search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
 			</form>
 		</div>
 	</nav>
 	
 	<section class="container mt-3" style="max-width:560px;">
 <div class="alert alert-success mt-4" role="alert">
-�̸��� �ּ� ���� ������ ���۵Ǿ����ϴ�. ȸ�����Խ� �Է��ߴ� �̸��Ͽ� ���ż� �������ּ���.</div>
+이메일 주소 인증 메일이 전송되었습니다. 회원가입시 입력했던 이메일에 들어가셔서 인증해주세요.</div>
 		
 	</section>
 
