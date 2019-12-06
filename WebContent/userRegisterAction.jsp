@@ -8,6 +8,18 @@
 
 request.setCharacterEncoding("UTF-8"); 
 String userID=null;
+if(session.getAttribute("userID") != null){
+	userID = (String) session.getAttribute("userID");
+}
+if(userID != null){
+	PrintWriter script = response.getWriter();
+	script.println("<script>");
+	script.println("alert('로그인이 된 상태입니다. ')");
+	script.println("location.href= 'indexn.jsp'");
+	script.println("</script>");
+	script.close();
+}
+
 String userPassword =null;
 String userEmail = null;
 
